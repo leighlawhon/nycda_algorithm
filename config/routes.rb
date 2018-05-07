@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'house_array/index'
+
   resources :users
-  root 'users#index'
+  root 'house_array#index'
 end

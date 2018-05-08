@@ -16,7 +16,7 @@
     <% @neighborhoods.each do |neighborhood| %>
       <% totals = neighborhood.totals(neighborhood.id)%>
       <tr>
-        <td><%= neighborhood.name %></td>
+        <td><%= link_to neighborhood.name, neighborhood, {class:''} %></td>
         <td><%= totals[0] %></td>
         <td><%= totals[1]  %></td>
 

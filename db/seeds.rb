@@ -4,4 +4,6 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create([{name: 'Luke', movie: movies.first}])
+neighborhoods = Neighborhood.create([{name: 'Ritz Neighborhood'},{name: 'Marina Neighborhood'}])
+House.create({ammount: 30000, neighborhood: neighborhoods.first})

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @neighborhood.name %>
+  <% if @neighborhood.houses.any? %>
+	<ul>
+		<% @neighborhood.houses.each do |house| %>
+			<li>house: <%= link_to house.id, house %> <%= house.ammount%></li>
+		<% end %>
+	</ul>
+
+<% else %>
+<p>none available</p>
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_neighborhood_path(@neighborhood) %> |
+<%= link_to 'Back', neighborhoods_path %>

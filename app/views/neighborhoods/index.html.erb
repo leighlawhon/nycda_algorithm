@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Neighborhoods To Rob</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Odd Total</th>
+      <th>Even Total</th>
+      <th colspan="3"><%= link_to 'Add Neighborhood', new_neighborhood_path, {class:"btn btn-primary pull-right text-white"} %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @neighborhoods.each do |neighborhood| %>
+      <% totals = neighborhood.totals(neighborhood.id)%>
+      <tr>
+        <td><%= link_to neighborhood.name, neighborhood, {class:''} %></td>
+        <td><%= totals[0] %></td>
+        <td><%= totals[1]  %></td>
+
+        <td><%= link_to 'Show', neighborhood %></td>
+        <td><%= link_to 'Edit', edit_neighborhood_path(neighborhood) %></td>
+        <td><%= link_to 'Destroy', neighborhood, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

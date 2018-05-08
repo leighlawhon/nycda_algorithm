@@ -1,0 +1,2 @@
+module HouseArrayHelper
+end

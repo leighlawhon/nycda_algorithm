@@ -30,7 +30,7 @@ class NeighborhoodsController < ApplicationController
   # POST /neighborhoods
   # POST /neighborhoods.json
   def create
-    @neighborhood = Neighborhood.new(neighborhood_params)
+    @neighborhood = Neighborhood.new
     @neighborhood.houses.build
     respond_to do |format|
       if @neighborhood.save

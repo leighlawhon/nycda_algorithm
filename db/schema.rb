@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180507132839) do
+ActiveRecord::Schema.define(version: 20180508173639) do
+
+  create_table "houses", force: :cascade do |t|
+    t.integer "ammount"
+    t.integer "neighborhood_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["neighborhood_id"], name: "index_houses_on_neighborhood_id"
+  end
+
+  create_table "neighborhoods", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "odd_total"
+    t.integer "even_total"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

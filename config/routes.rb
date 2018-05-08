@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  get 'house_array/index'
-
   resources :users
-  root 'house_array#index'
+  resources :houses
+  resources :neighborhoods
+	resources :users, :neighborhoods
+	get '/', to: 'neighborhoods#index'
+	post '/', to: 'neighborhoods#index'
+	get '/neighborhoods', to: 'neighborhoods#new'
+	post '/neighborhoods', to: 'neighborhoods#new'
 end

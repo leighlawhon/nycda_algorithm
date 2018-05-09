@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20180508173639) do
 
   create_table "houses", force: :cascade do |t|
-    t.integer "ammount"
+    t.integer "amount"
     t.integer "neighborhood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

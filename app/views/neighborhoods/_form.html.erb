@@ -20,8 +20,8 @@
       <%= form.fields_for :houses do |house| %>
     	  <div class="house_fields clearfix">
     		  <div class="form-group">
-    		  <%= house.label :ammount %>
-    		  <%= house.text_field :ammount, {class: 'form-control'} %>
+    		  <%= house.label :amount %>
+    		  <%= house.text_field :amount, {class: 'form-control'} %>
     		  <%= house.check_box :_destroy, {class: 'pull-right'}%>
     		  <%= house.label :_destroy, 'remove', {class: 'pull-right mr_1'} %>
     		  </div>

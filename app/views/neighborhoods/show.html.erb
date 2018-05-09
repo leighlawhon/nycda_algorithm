@@ -6,7 +6,7 @@
   <% if @neighborhood.houses.any? %>
 	<ul>
 		<% @neighborhood.houses.each do |house| %>
-			<li>house: <%= link_to house.id, house %> <%= house.ammount%></li>
+			<li>house: <%= link_to house.id, house %> <%= house.amount%></li>
 		<% end %>
 	</ul>
 
